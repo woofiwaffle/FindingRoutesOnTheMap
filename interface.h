@@ -3,27 +3,30 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QLabel>
+#include <QLineEdit>
 #include <QVBoxLayout>
-#include <QGraphicsScene>
-#include <QGraphicsView>
-#include <QFileDialog>
-#include <QDebug>
 
 class Interface : public QWidget {
     Q_OBJECT
+    QPushButton* loadMapButton;
+    QPushButton* addObstacleButton;
+    QPushButton* editObstacleButton;
+    QPushButton* removeObstacleButton;
+    QPushButton* setStartButton;
+    QPushButton* setFinishButton;
 
 public:
-    explicit Interface(QWidget *parent = nullptr);
+    Interface(QWidget *parent = nullptr);
+    ~Interface();
 
-private:
-    QPushButton* loadMapButton;
-    QPushButton* findRouteButton;
-    QGraphicsScene* scene;
-    QGraphicsView* view;
-
-private slots:
+public slots:
     void loadMap();
-    void findRoute();
+    void addObstacle();
+    void editObstacle();
+    void removeObstacle();
+    void setStartPoint();
+    void setFinishPoint();
 };
 
 #endif // INTERFACE_H
