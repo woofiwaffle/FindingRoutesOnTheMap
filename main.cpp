@@ -1,9 +1,14 @@
 #include "interface.h"
+#include "parsingmap.h"
 #include <QApplication>
 
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
-    Interface w;
+
+    TParsing parsing;
+    Interface w(&parsing);   // закомментировал т.к. не запустится экран редактирования
+    //Interface w;
     w.show();
+
     return a.exec();
 }

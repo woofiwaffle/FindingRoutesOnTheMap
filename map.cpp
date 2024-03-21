@@ -6,12 +6,16 @@ Map::Map(QObject *parent) : QObject(parent) {}
 
 
 
-bool Map::loadMapFromFile(const QString &fileName){
-    return true;
+Map::~Map(){}
+
+
+
+Route Map::findOptimalRoute() const{   // поиск оптимального маршрута
+    return Route(QPolygonF(), 0.0, 0.0);
 }
 
 
 
-Route Map::findOptimalRoute() const{
-    return Route(QPolygonF(), 0.0, 0.0);
+void Map::addObstacle(const Obstacle& obstacle){
+    obstacles.push_back(obstacle);      // добавить препятствие
 }

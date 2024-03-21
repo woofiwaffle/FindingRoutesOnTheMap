@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map>
-    <obstacle impasseIndex="50">
-        <point x="100" y="100"/>
-        <point x="200" y="100"/>
-        <point x="200" y="200"/>
-        <point x="100" y="200"/>
+    <obstacle>
+        <pos>10.0, 20,0</pos>
+        <impasseIndex>80</impasseIndex>
     </obstacle>
-    <obstacle impasseIndex="30">
-        <point x="300" y="300"/>
-        <point x="400" y="300"/>
-        <point x="400" y="400"/>
-        <point x="300" y="400"/>
+    <obstacle>
+        <pos>30.0, 40,0</pos>
+        <impasseIndex>60</impasseIndex>
     </obstacle>
 </map>

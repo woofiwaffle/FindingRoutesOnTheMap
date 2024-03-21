@@ -13,12 +13,14 @@ SOURCES += \
     main.cpp \
     map.cpp \
     obstacle.cpp \
+    parsingmap.cpp \
     route.cpp
 
 HEADERS += \
     interface.h \
     map.h \
     obstacle.h \
+    parsingmap.h \
     route.h
 
 DISTFILES += \

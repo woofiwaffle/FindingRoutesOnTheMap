@@ -6,18 +6,18 @@ Route::Route(const QPolygonF& points, qreal length, qreal time) : m_points(point
 
 
 
-QPolygonF Route::getPoints() const{
+QPolygonF Route::getPoints() const{  // получение точек
     return m_points;
 }
 
 
 
-qreal Route::getLength() const{
+qreal Route::getLength() const{  // получение длины
     return m_length;
 }
 
 
 
-qreal Route::getTime() const{
+qreal Route::getTime() const{   // получение времени
     return m_time;
 }

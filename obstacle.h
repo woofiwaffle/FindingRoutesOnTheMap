@@ -5,13 +5,15 @@
 
 class Obstacle{
 public:
-    Obstacle() = default;
-    Obstacle(const QPolygonF& polygon, int impasseIndex);
-    QPolygonF getPolygon() const;
+    Obstacle();
+    //~Obstacle();
+    Obstacle(const QPointF& pos, int impasseIndex);
+
+    QPointF getPos() const;
     int getImpasseIndex() const;
 
 private:
-    QPolygonF m_polygon;
+    QPointF m_pos;
     int m_impasseIndex;
 };
 

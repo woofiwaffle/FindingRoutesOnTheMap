@@ -1,19 +1,22 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include <QObject>
-#include <QVector>
 #include "obstacle.h"
 #include "route.h"
+
+#include <QObject>
+#include <QVector>
+
 
 class Map : public QObject{
     Q_OBJECT
 
 public:
-    explicit Map(QObject *parent = nullptr);
+    Map(QObject *parent = nullptr);
+    ~Map();
 
-    bool loadMapFromFile(const QString &fileName);
     Route findOptimalRoute() const;
+    void addObstacle(const Obstacle& obstacle);
 
 private:
     QVector<Obstacle> obstacles;

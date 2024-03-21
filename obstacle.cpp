@@ -1,17 +1,19 @@
 #include "obstacle.h"
 
+Obstacle::Obstacle() : m_impasseIndex(0) {}
+
+Obstacle::Obstacle(const QPointF& pos, int impasseIndex) : m_pos(pos), m_impasseIndex(impasseIndex) {}
+
+//Obstacle::~Obstacle() {}
 
 
-Obstacle::Obstacle(const QPolygonF& polygon, int impasseIndex) : m_polygon(polygon), m_impasseIndex(impasseIndex) {}
 
-
-
-QPolygonF Obstacle::getPolygon() const{
-    return m_polygon;
+QPointF Obstacle::getPos() const{
+    return m_pos; // получение позиции препятствия
 }
 
 
 
 int Obstacle::getImpasseIndex() const{
-    return m_impasseIndex;
+    return m_impasseIndex; // получить индекс тупика
 }
